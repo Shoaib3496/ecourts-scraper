@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>eCourts Scraper</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>eCourts Cause List Scraper</h1>
+    <form id="scrapeForm">
+      <label>State</label>
+      <select id="state" name="state"><option value="">Loading...</option></select>
+
+      <label>District</label>
+      <select id="district" name="district" disabled><option value="">Select State first</option></select>
+
+      <label>Court Complex</label>
+      <select id="complex" name="complex" disabled><option value="">Select District first</option></select>
+
+      <label>Court</label>
+      <select id="court" name="court" disabled><option value="">Select Complex first</option></select>
+
+      <label>Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label>List Type</label>
+      <select id="listType" name="listType">
+        <option value="civil">Civil</option>
+        <option value="criminal">Criminal</option>
+      </select>
+
+      <button type="submit">Generate Cause List PDF</button>
+    </form>
+
+    <div id="result" style="margin-top:20px"></div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
